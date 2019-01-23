@@ -10,11 +10,10 @@ RUN set -ex \
     && mkdir -p /etc/peaks \
     && bash ./compile_libraries.sh release full \
     && mkdir build && cd build/ \
-    && cmake -DCMAKE_BUILD_TYPE=Release .. \
+    && cmake -DCMAKE_BUILD_TYPE=Docker .. \
     && make -j4 \
     && cd ../bin \
-    && install -m755 ./peaks /usr/bin/peaks \
-    && chmod +x /usr/bin/peaks_init
+    && install -m755 ./peaks /usr/bin/peaks
 
 COPY srv /srv
 EXPOSE 80 443 11371 11370
