@@ -8,7 +8,7 @@ RUN set -ex \
     && git clone --recursive git://github.com/r4yan2/peaks.git \
     && cd peaks \
     && mkdir -p /etc/peaks \
-    && bash ./compile_libraries.sh release full \
+    && bash ./compile_libraries.sh docker full \
     && mkdir build && cd build/ \
     && cmake -DCMAKE_BUILD_TYPE=Docker .. \
     && make -j4 \
