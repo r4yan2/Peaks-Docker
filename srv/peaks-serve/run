@@ -1,2 +1,2 @@
 #!/bin/sh
-peaks serve
+peaks --stdout serve
