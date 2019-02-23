@@ -1,9 +1,9 @@
 FROM ubuntu:latest
 MAINTAINER Andrea Grazioso <grazioandre@gmail.com>
 
-COPY ../init_config.sh /usr/bin/init_config
-COPY ../peaks_init.sh /usr/bin/peaks_init
-COPY ../srv /srv/service
+COPY init_config.sh /usr/bin/init_config
+COPY peaks_init.sh /usr/bin/peaks_init
+COPY srv /srv/service
 RUN set -ex \
     && apt-get update \
     && apt-get install -y build-essential m4 curl python cmake git libcurl4-openssl-dev libpcre3-dev libicu-dev libgcrypt11-dev zlib1g-dev libbz2-dev libgmp-dev libboost-program-options-dev libboost-system-dev libboost-filesystem-dev libmysqlcppconn-dev\
